@@ -3,9 +3,11 @@
 
 There may come a time when you actually need to have a navigation strategy like this one. Pusher is two push navigations that work independently an enables a more complex navigation system. It's built on [Bootstrap](http://getbootstrap.com/) so you'd need to have this installed.
 
+[Demo](http://adrian.sofinet.se/demos/pusher/)
+
 Pusher uses [Fontello](http://fontello.com/) icons so it's easy to change or add custom icons.
 
-__Usage__
+__Usage__  
 Place a link to the css inside the <head> tag in your index file (make sure you remember Bootstrap).
 
 ```
