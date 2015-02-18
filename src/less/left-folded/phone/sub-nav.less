@@ -1,0 +1,32 @@
+@media @phone {
+	.sub-nav {
+		&.push-left,
+		&.push-right {
+			background-color: @gray-dark;
+			width: 100%;
+			position: relative;
+			height: 39px;
+			top: 0;
+			left: 0;
+
+			.sub-nav-togg {
+				font-size: 20px;
+				text-align: right;
+				padding: 5px 11px;
+				color: lighten(@gray-dark, 10%);
+
+				&:hover {
+					color: fade(@brand-primary, 20%);
+					cursor: pointer;
+				}
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+				cursor: default;
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,160 @@
+.main-nav {
+	&.push-right {
+		background-color: @gray-darker;
+		width: 50px;
+		height: 100%;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		z-index: 20;
+		box-shadow: 1px 0 0 fade(@gray-base, 40%);
+
+		-webkit-transition: width @easeTime @easeAnimation;
+		   -moz-transition: width @easeTime @easeAnimation;
+		     -o-transition: width @easeTime @easeAnimation;
+		        transition: width @easeTime @easeAnimation;
+				 	
+		.main-nav-togg {
+			font-size: 20px;
+			text-align: right;
+			padding: 5px 11px;
+			
+			-webkit-transition: color .1s ease-out;
+			   -moz-transition: color .1s ease-out;
+			     -o-transition: color .1s ease-out;
+			        transition: color .1s ease-out;
+
+			&:hover {
+				color: fade(@brand-primary, 20%);
+				cursor: pointer;
+
+				-webkit-transition: color .1s ease-in;
+				   -moz-transition: color .1s ease-in;
+				     -o-transition: color .1s ease-in;
+				        transition: color .1s ease-in;
+			}
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			cursor: default;
+		}
+					
+		.nav > li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			border-top: 1px solid fade(@gray-base, 20%);
+
+			span {
+				opacity: 0;
+				margin-right: -100px;
+
+				-webkit-transition: all .15s @easeAnimation;
+			       -moz-transition: all .15s @easeAnimation;
+			         -o-transition: all .15s @easeAnimation;
+			        	transition: all .15s @easeAnimation;
+			}
+						
+			&:last-child {
+				border-bottom: 1px solid fade(@gray-base, 20%);
+			}
+
+			> a {
+				display: block;
+				line-height: 36px;
+				color: @gray-lighter;
+				padding: 0;
+				padding-left: 30px;
+				outline: none;
+				white-space: nowrap;
+
+				-webkit-transition: background .1s ease-in-out;
+				   -moz-transition: background .1s ease-in-out;
+				     -o-transition: background .1s ease-in-out;
+				        transition: background .1s ease-in-out;
+			}
+
+			a:hover {
+				text-decoration: none;
+				background: fade(@brand-primary, 20%);
+				
+				-webkit-transition: background .1s ease-in-out;
+				   -moz-transition: background .1s ease-in-out;
+				     -o-transition: background .1s ease-in-out;
+				        transition: background .1s ease-in-out;
+			}
+
+			i {
+				float: left;
+				font-size: 16px;
+				margin-left: -30px;
+				width: 50px;
+				height: 36px;
+				font-style: normal;
+				text-align: center;
+				
+				-webkit-transition: background .1s ease-in-out;
+				   -moz-transition: background .1s ease-in-out;
+				     -o-transition: background .1s ease-in-out;
+				        transition: background .1s ease-in-out;
+			}
+
+			.caret {
+				float: right;
+				position: absolute;
+				top: 15px;
+				right: 15px;
+			}
+
+			ul {
+				height: 0;
+				margin: 0;
+				padding: 0;
+				opacity: 0;
+				overflow: hidden;
+
+				-webkit-transition: opacity @easeTime linear;
+				   -moz-transition: opacity @easeTime linear;
+				     -o-transition: opacity @easeTime linear;
+				        transition: opacity @easeTime linear;
+				li {
+					margin: 0;
+					list-style: none;
+					border-top: 1px solid fade(@gray-base, 20%);
+					background: fade(@gray-base, 10%);
+								
+					&:last-child {
+						border-bottom: 0;
+					}
+
+					a {
+						font-size: 12px;
+						line-height: 36px;
+						display: block;
+						color: darken(@gray-lighter, 20%);
+						padding-left: 60px;
+						outline: none;
+
+						-webkit-transition: background .1s ease-in-out;
+						   -moz-transition: background .1s ease-in-out;
+						     -o-transition: background .1s ease-in-out;
+						        transition: background .1s ease-in-out;
+					}
+				}
+			}
+		}
+
+		.nav-pills > li {
+			> a {
+				border-radius: 0;
+			}
+
+			&.active > a {
+				box-shadow: inset 0 0 25px -5px fade(@gray-base, 50%);
+				background: @gray-darker;
+			}
+		}
+	}
+}

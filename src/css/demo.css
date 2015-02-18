@@ -1,0 +1,52 @@
+body {
+	background: #555;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1480px;
+	padding: 0;
+	margin: 0;
+	font-family: "Noto Sans";
+	color: #292929;
+}
+
+.main-content {
+	padding: 20px;
+}
+
+.container .jumbotron {
+	padding-left: 20px;
+	padding-right: 20px;
+	background: none;
+}
+
+.container .jumbotron a {
+	color: #333;
+	text-decoration: underline;
+}
+
+.container .jumbotron a:hover {
+	color: #222;
+}
+
+.panel {
+	background: #999;
+	border-color: #666;
+}
+
+.panel hr {
+	border-color: #777;
+}
+
+hr {
+	border-color: #444;
+}
+
+a {
+	color: rgba(66, 139, 202, 1);
+}
+a:hover {
+	color: rgba(66, 139, 202, .8);
+}

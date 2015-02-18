@@ -1,0 +1,33 @@
+@media @phone {
+
+	.main-nav {
+		&.push-left,
+		&.push-right {
+			background-color: @gray-darker;
+			width: 100%;
+			position: relative;
+			left: inherit;
+			top: 0;
+			right: 0;
+			z-index: 3000;
+			
+			.main-nav-togg {
+				font-size: 20px;
+				text-align: right;
+				padding: 11px;
+
+				.navbar-brand {
+					height: auto;
+					padding: 0;
+				}
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+				cursor: default;
+				display: none;
+			}
+		}
+	}
+}

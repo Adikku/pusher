@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pusher navigation demo</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link id="pusher-style" rel="stylesheet" type="text/css" href="src/css/pusher-left.css">
+	<link rel="stylesheet" type="text/css" href="src/css/demo.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body class="left-nav">
+
+	<div class="container">
+		<nav>
+			<div class="main-nav push-left">
+				<div class="main-nav-togg"><div class="visible-xs navbar-brand">Pusher</div><i class="icon-menu"></i></div>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#"><i class="icon-gauge"></i><span>Dashboard</span></a></li>
+					<li><a href="#"><i class="icon-chart-bar"></i><span>Charts</span></a></li>
+					<li class="active"><a href="#"><i class="icon-calendar"></i><span>Events</span></a></li>
+					<li onclick="$(this).toggleClass('visible')"><a href="#"><i class="icon-cog-alt"></i><span>Settings</span><span class="caret"></span></a>
+						<ul class="child-menu">
+							<li><a href="#">Account</a></li>
+							<li><a href="#">Policy</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="icon-users"></i><span>Profile</span></a></li>
+				</ul>
+			</div>
+			<div class="sub-nav push-left">
+				<div class="sub-nav-togg"><i class="icon-menu"></i></div>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#"><span>Sub Level I</span></a></li>
+					<li onclick="$(this).toggleClass('visible')"><a href="#"><span>Sub Level II</span><span class="caret"></span></a>
+						<ul class="child-menu">
+							<li><a href="#">List item</a></li>
+							<li><a href="#">List item</a></li>
+							<li><a href="#">List item</a></li>
+						</ul>
+					</li>
+					<li class="active"><a href="#"><span>Sub Level III</span></a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="main-content">
+			
+			<div class="jumbotron">
+			  	<h1>Pusher <small>- Twice the navigation, double the fun</small></h1>
+			  	<p>This neat little navigation comes in both left and right mode. It's use case is rare, however, there could come a time when you need a navigation layout similar to this one. Pusher is built on top of <a href="http://getbootstrap.com/">Bootstrap 3.x</a></p>
+			  	<div class="btn-group">
+			  		<button id="leftie" class="btn btn-info">Left side</button>
+			  		<button id="rightie" class="btn btn-info">Right side</button>
+			  	</div>
+			 </div>
+			  	
+			  	<div class="row">
+				  	<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h3>Carles Cred Organic</h3>
+								Art party sustainable kale chips sriracha viral. Chambray American Apparel seitan Helvetica stumptown, artisan viral Carles cred organic VHS authentic messenger bag.
+								<hr/>
+							    <p><button class="btn pull-right">Portland distillery</button></p>
+							</div>
+						</div>
+				  		<p>Sartorial salvia beard tilde Banksy banh mi aesthetic. Quinoa migas cray selvage kale chips sustainable Austin, cliche asymmetrical taxidermy leggings YOLO skateboard.</p>
+				  		
+				  		<p>Flexitarian Odd Future fixie farm-to-table food truck paleo, ennui pork belly irony bitters flannel scenester iPhone seitan Bushwick.</p>
+				  		
+				  	</div>
+				  	<div class="col-md-6">
+				  		<div class="panel panel-default">
+							<div class="panel-body">
+								<h3>Shabby chic Odd</h3>
+								Shabby chic Odd Future Pinterest, Portland distillery Banksy banjo cold-pressed meggings photo booth flexitarian semiotics kogi. Fap organic mustache bicycle.
+								<hr/>
+								<p><button class="btn pull-right">Cliche asymmetrical</button></p>
+							</div>
+						</div>
+				  		
+				  		<p>Keytar Bushwick pop-up wolf gentrify sriracha. Viral retro tilde lomo kogi meggings. Wes Anderson flannel taxidermy wayfarers next level, bespoke Shoreditch tilde.</p>
+				  		<p>Listicle occupy seitan, Godard artisan pug disrupt mixtape.</p>
+				  	</div>
+			  	</div>
+			<div class="footer">
+				<hr>
+				<p class="col-md-12">Made by <a href="http://se.linkedin.com/pub/adrian-sofinet/21/497/bb0/en">Adrian Sofinet</a>. Use and change Pusher as you like. Check out more of <a href="http://adrian.sofinet.se/">my work</a></p>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+
+		$('.main-nav-togg').click(function(){
+			$('body').toggleClass('main-nav-pushLeft-open');
+		});
+		$('.sub-nav-togg').click(function(){
+			$('body').toggleClass('sub-nav-pushLeft-open');
+		});
+
+		$('#leftie').click(function(){
+
+			$('#pusher-style').attr('href', 'src/css/pusher-left.css');
+
+			$('.main-nav-togg').unbind('click');
+			$('.sub-nav-togg').unbind('click');
+
+			document.querySelector('body').className = 'left-nav';
+			$('.main-nav').removeClass('push-right').addClass('push-left');
+			$('.sub-nav').removeClass('push-right').addClass('push-left');
+
+			$('.main-nav-togg').click(function(){
+				$('body').toggleClass('main-nav-pushLeft-open');
+			});
+			$('.sub-nav-togg').click(function(){
+				$('body').toggleClass('sub-nav-pushLeft-open');
+			});
+
+		});
+
+		$('#rightie').click(function(){
+
+			$('#pusher-style').attr('href', 'src/css/pusher-right.css');
+
+			$('.main-nav-togg').unbind('click');
+			$('.sub-nav-togg').unbind('click');
+
+			document.querySelector('body').className = 'right-nav';
+			$('.main-nav').removeClass('push-left').addClass('push-right');
+			$('.sub-nav').removeClass('push-left').addClass('push-right');
+
+			$('.main-nav-togg').click(function(){
+				$('body').toggleClass('main-nav-pushRight-open');
+			});
+			$('.sub-nav-togg').click(function(){
+				$('body').toggleClass('sub-nav-pushRight-open');
+			});
+
+		});
+
+
+	</script>
+</body>
+</html>
