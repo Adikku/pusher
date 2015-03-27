@@ -9,7 +9,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: "Noto Sans";
-	color: #292929;
+	color: #fff;
 }
 
 .main-content {
@@ -20,7 +20,10 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 	background: none;
+	small { color: weat; }
 }
+
+.jumbotron small { color: wheat; }
 
 .container .jumbotron a {
 	color: #333;
@@ -32,8 +35,17 @@ body {
 }
 
 .panel {
-	background: #999;
+	background: dimgray;
 	border-color: #666;
+}
+
+.panel .btn {
+	color: rgba(66, 139, 202, 1);
+	background: white;
+}
+
+.panel .btn:hover {
+	background: #f1f1f1;
 }
 
 .panel hr {
